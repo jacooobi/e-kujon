@@ -1,0 +1,20 @@
+{
+  "name": "E-Kujon",
+  "description": "This extension allows you to feel better about your grades",
+  "version": "1.1",
+
+  "permissions": [
+    "tabs","<all_urls>"
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [{
+        "matches": ["https://estudent2.put.poznan.pl/*"],
+        "js": ["./proto.js"]
+  }],
+  "manifest_version": 5
+}
